@@ -1,0 +1,141 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\SideProject\\accounting-app-backend\\AccountingAppBackend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DD2F416F-78E4-4AB8-A9E3-A2397C58CFEB}|AccountingAppBackend\\AccountingAppBackend.csproj|d:\\sideproject\\accounting-app-backend\\accountingappbackend\\accountingappbackend\\models\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD2F416F-78E4-4AB8-A9E3-A2397C58CFEB}|AccountingAppBackend\\AccountingAppBackend.csproj|solutionrelative:accountingappbackend\\models\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD2F416F-78E4-4AB8-A9E3-A2397C58CFEB}|AccountingAppBackend\\AccountingAppBackend.csproj|d:\\sideproject\\accounting-app-backend\\accountingappbackend\\accountingappbackend\\models\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD2F416F-78E4-4AB8-A9E3-A2397C58CFEB}|AccountingAppBackend\\AccountingAppBackend.csproj|solutionrelative:accountingappbackend\\models\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD2F416F-78E4-4AB8-A9E3-A2397C58CFEB}|AccountingAppBackend\\AccountingAppBackend.csproj|d:\\sideproject\\accounting-app-backend\\accountingappbackend\\accountingappbackend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD2F416F-78E4-4AB8-A9E3-A2397C58CFEB}|AccountingAppBackend\\AccountingAppBackend.csproj|solutionrelative:accountingappbackend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73C1F360-DE63-4EE9-BF8D-527FE57780F6}|AccountingAppBackend.DataAccess\\AccountingAppBackend.DataAccess.csproj|d:\\sideproject\\accounting-app-backend\\accountingappbackend\\accountingappbackend.dataaccess\\models\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73C1F360-DE63-4EE9-BF8D-527FE57780F6}|AccountingAppBackend.DataAccess\\AccountingAppBackend.DataAccess.csproj|solutionrelative:accountingappbackend.dataaccess\\models\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73C1F360-DE63-4EE9-BF8D-527FE57780F6}|AccountingAppBackend.DataAccess\\AccountingAppBackend.DataAccess.csproj|d:\\sideproject\\accounting-app-backend\\accountingappbackend\\accountingappbackend.dataaccess\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73C1F360-DE63-4EE9-BF8D-527FE57780F6}|AccountingAppBackend.DataAccess\\AccountingAppBackend.DataAccess.csproj|solutionrelative:accountingappbackend.dataaccess\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD2F416F-78E4-4AB8-A9E3-A2397C58CFEB}|AccountingAppBackend\\AccountingAppBackend.csproj|d:\\sideproject\\accounting-app-backend\\accountingappbackend\\accountingappbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD2F416F-78E4-4AB8-A9E3-A2397C58CFEB}|AccountingAppBackend\\AccountingAppBackend.csproj|solutionrelative:accountingappbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73C1F360-DE63-4EE9-BF8D-527FE57780F6}|AccountingAppBackend.DataAccess\\AccountingAppBackend.DataAccess.csproj|d:\\sideproject\\accounting-app-backend\\accountingappbackend\\accountingappbackend.dataaccess\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73C1F360-DE63-4EE9-BF8D-527FE57780F6}|AccountingAppBackend.DataAccess\\AccountingAppBackend.DataAccess.csproj|solutionrelative:accountingappbackend.dataaccess\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "dbContext.cs",
+              "DocumentMoniker": "D:\\SideProject\\accounting-app-backend\\AccountingAppBackend\\AccountingAppBackend.DataAccess\\dbContext.cs",
+              "RelativeDocumentMoniker": "AccountingAppBackend.DataAccess\\dbContext.cs",
+              "ToolTip": "D:\\SideProject\\accounting-app-backend\\AccountingAppBackend\\AccountingAppBackend.DataAccess\\dbContext.cs",
+              "RelativeToolTip": "AccountingAppBackend.DataAccess\\dbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T05:57:48.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\SideProject\\accounting-app-backend\\AccountingAppBackend\\AccountingAppBackend.DataAccess\\Models\\User.cs",
+              "RelativeDocumentMoniker": "AccountingAppBackend.DataAccess\\Models\\User.cs",
+              "ToolTip": "D:\\SideProject\\accounting-app-backend\\AccountingAppBackend\\AccountingAppBackend.DataAccess\\Models\\User.cs",
+              "RelativeToolTip": "AccountingAppBackend.DataAccess\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-14T14:43:47.265Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RegisterRequest.cs",
+              "DocumentMoniker": "D:\\SideProject\\accounting-app-backend\\AccountingAppBackend\\AccountingAppBackend\\Models\\RegisterRequest.cs",
+              "RelativeDocumentMoniker": "AccountingAppBackend\\Models\\RegisterRequest.cs",
+              "ToolTip": "D:\\SideProject\\accounting-app-backend\\AccountingAppBackend\\AccountingAppBackend\\Models\\RegisterRequest.cs",
+              "RelativeToolTip": "AccountingAppBackend\\Models\\RegisterRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-14T14:37:06.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "dbContext.cs",
+              "DocumentMoniker": "D:\\SideProject\\accounting-app-backend\\AccountingAppBackend\\AccountingAppBackend.DataAccess\\Models\\dbContext.cs",
+              "RelativeDocumentMoniker": "AccountingAppBackend.DataAccess\\Models\\dbContext.cs",
+              "ToolTip": "D:\\SideProject\\accounting-app-backend\\AccountingAppBackend\\AccountingAppBackend.DataAccess\\Models\\dbContext.cs",
+              "RelativeToolTip": "AccountingAppBackend.DataAccess\\Models\\dbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-14T13:07:57.61Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoginRequest.cs",
+              "DocumentMoniker": "D:\\SideProject\\accounting-app-backend\\AccountingAppBackend\\AccountingAppBackend\\Models\\LoginRequest.cs",
+              "RelativeDocumentMoniker": "AccountingAppBackend\\Models\\LoginRequest.cs",
+              "ToolTip": "D:\\SideProject\\accounting-app-backend\\AccountingAppBackend\\AccountingAppBackend\\Models\\LoginRequest.cs",
+              "RelativeToolTip": "AccountingAppBackend\\Models\\LoginRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T13:07:28.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\SideProject\\accounting-app-backend\\AccountingAppBackend\\AccountingAppBackend\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "AccountingAppBackend\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\SideProject\\accounting-app-backend\\AccountingAppBackend\\AccountingAppBackend\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "AccountingAppBackend\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAuwCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T13:04:41.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\SideProject\\accounting-app-backend\\AccountingAppBackend\\AccountingAppBackend\\Program.cs",
+              "RelativeDocumentMoniker": "AccountingAppBackend\\Program.cs",
+              "ToolTip": "D:\\SideProject\\accounting-app-backend\\AccountingAppBackend\\AccountingAppBackend\\Program.cs",
+              "RelativeToolTip": "AccountingAppBackend\\Program.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T13:03:41.323Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

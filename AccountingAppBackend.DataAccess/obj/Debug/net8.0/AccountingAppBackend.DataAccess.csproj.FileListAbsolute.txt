@@ -1,0 +1,14 @@
+D:\SideProject\accounting-app-backend\AccountingAppBackend\AccountingAppBackend.DataAccess\bin\Debug\net8.0\AccountingAppBackend.DataAccess.deps.json
+D:\SideProject\accounting-app-backend\AccountingAppBackend\AccountingAppBackend.DataAccess\bin\Debug\net8.0\AccountingAppBackend.DataAccess.runtimeconfig.json
+D:\SideProject\accounting-app-backend\AccountingAppBackend\AccountingAppBackend.DataAccess\bin\Debug\net8.0\AccountingAppBackend.DataAccess.dll
+D:\SideProject\accounting-app-backend\AccountingAppBackend\AccountingAppBackend.DataAccess\bin\Debug\net8.0\AccountingAppBackend.DataAccess.pdb
+D:\SideProject\accounting-app-backend\AccountingAppBackend\AccountingAppBackend.DataAccess\obj\Debug\net8.0\AccountingAppBackend.DataAccess.csproj.AssemblyReference.cache
+D:\SideProject\accounting-app-backend\AccountingAppBackend\AccountingAppBackend.DataAccess\obj\Debug\net8.0\AccountingAppBackend.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\SideProject\accounting-app-backend\AccountingAppBackend\AccountingAppBackend.DataAccess\obj\Debug\net8.0\AccountingAppBackend.DataAccess.AssemblyInfoInputs.cache
+D:\SideProject\accounting-app-backend\AccountingAppBackend\AccountingAppBackend.DataAccess\obj\Debug\net8.0\AccountingAppBackend.DataAccess.AssemblyInfo.cs
+D:\SideProject\accounting-app-backend\AccountingAppBackend\AccountingAppBackend.DataAccess\obj\Debug\net8.0\AccountingAppBackend.DataAccess.csproj.CoreCompileInputs.cache
+D:\SideProject\accounting-app-backend\AccountingAppBackend\AccountingAppBackend.DataAccess\obj\Debug\net8.0\AccountingAppBackend.DataAccess.dll
+D:\SideProject\accounting-app-backend\AccountingAppBackend\AccountingAppBackend.DataAccess\obj\Debug\net8.0\refint\AccountingAppBackend.DataAccess.dll
+D:\SideProject\accounting-app-backend\AccountingAppBackend\AccountingAppBackend.DataAccess\obj\Debug\net8.0\AccountingAppBackend.DataAccess.pdb
+D:\SideProject\accounting-app-backend\AccountingAppBackend\AccountingAppBackend.DataAccess\obj\Debug\net8.0\AccountingAppBackend.DataAccess.genruntimeconfig.cache
+D:\SideProject\accounting-app-backend\AccountingAppBackend\AccountingAppBackend.DataAccess\obj\Debug\net8.0\ref\AccountingAppBackend.DataAccess.dll

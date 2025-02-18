@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "SQ1PDWlu8t6ZQ1md8UBWTJPQwh8VVgfZSCnF03KTYWE=",
+  "Source": "AccountingAppBackend",
+  "BasePath": "_content/AccountingAppBackend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
