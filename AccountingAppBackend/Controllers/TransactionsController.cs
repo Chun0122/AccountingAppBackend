@@ -94,7 +94,7 @@ namespace AccountingAppBackend.Controllers
             }
         }
 
-        [HttpPut("{transactionId}")] // 定義路由為 /api/Transactions/UpdateTransaction/{transactionId}，HTTP 方法為 PUT
+        [HttpPut("UpdateTransaction/{transactionId}")] // 定義路由為 /api/Transactions/UpdateTransaction/{transactionId}，HTTP 方法為 PUT
         public async Task<IActionResult> UpdateTransaction(int transactionId, [FromBody] UpdateTransactionRequest request) // 從 Request Body 接收 UpdateTransactionRequest
         {
             if (!ModelState.IsValid)
@@ -137,6 +137,38 @@ namespace AccountingAppBackend.Controllers
                 // 更新失敗，發生例外錯誤 (例如資料庫錯誤)
                 Console.WriteLine($"更新交易記錄失敗，發生例外錯誤: {ex}"); // 記錄錯誤訊息到 Console，方便除錯
                 return StatusCode(500, "更新交易記錄失敗，伺服器發生錯誤。"); // 返回 500 Internal Server Error，並包含錯誤訊息
+            }
+        }
+
+        [HttpDelete("DeleteTransaction/{transactionId}")] // 定義路由為 /api/Transactions/DeleteTransaction/{transactionId}，HTTP 方法為 DELETE
+        public async Task<IActionResult> DeleteTransaction(int transactionId) // 從 Request Body 接收 UpdateTransactionRequest
+        {
+            // 1. 根據 transactionId，從資料庫中查詢要更新的交易記錄
+            var transactionToDelete = await _context.Transactions.FindAsync(transactionId);
+
+            // 2. 檢查交易記錄是否存在
+            if (transactionToDelete == null)
+            {
+                // 如果找不到對應的交易記錄，返回 404 Not Found
+                return NotFound($"找不到 Id 為 {transactionId} 的交易記錄。");
+            }
+
+            // 3. 將交易記錄從資料庫中刪除
+            _context.Transactions.Remove(transactionToDelete);
+
+            try
+            {
+                // 4. 將變更儲存到資料庫
+                await _context.SaveChangesAsync();
+
+                // 更新成功，返回 200 OK，並包含成功訊息
+                return Ok(new { message = $"Id 為 {transactionId} 的交易記錄刪除成功！" });
+            }
+            catch (Exception ex)
+            {
+                // 更新失敗，發生例外錯誤 (例如資料庫錯誤)
+                Console.WriteLine($"刪除交易記錄失敗，發生例外錯誤: {ex}"); // 記錄錯誤訊息到 Console，方便除錯
+                return StatusCode(500, "刪除交易記錄失敗，伺服器發生錯誤。"); // 返回 500 Internal Server Error，並包含錯誤訊息
             }
         }
 

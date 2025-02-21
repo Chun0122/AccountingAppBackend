@@ -42,7 +42,8 @@ namespace AccountingAppBackend.Controllers
                 .Select(s => new // 轉換成前端需要的格式
                 {
                     value = s.SubcategoryId.ToString(), // value 屬性為字串格式的 SubcategoryId
-                    label = s.SubcategoryName // label 屬性為 SubcategoryName
+                    label = s.SubcategoryName, // label 屬性為 SubcategoryName
+                    categoryId = s.CategoryId // category 屬性為 CategoryId
                 })
                 .ToList(); // 立即執行查詢並轉換成 List
 
