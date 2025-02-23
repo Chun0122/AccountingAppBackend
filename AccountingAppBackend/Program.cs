@@ -1,6 +1,8 @@
 ﻿using System.Text;
 using System.Text.Json;
 using AccountingAppBackend.DataAccess;
+using AccountingAppBackend.Services.INF;
+using AccountingAppBackend.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -78,6 +80,11 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme) //  �
 
 // 2.  設定 Authorization (授權) 服務 (可選，如果您需要基於角色或權限的授權)
 builder.Services.AddAuthorization();
+
+builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<ITransactionService, TransactionService>();
+builder.Services.AddScoped<IDropdownOptionsService, DropdownOptionsService>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
 
 var app = builder.Build();
 

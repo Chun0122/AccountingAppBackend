@@ -29,6 +29,9 @@ public partial class Category
     [Column(TypeName = "timestamp")]
     public DateTime? UpdatedAt { get; set; }
 
+    [StringLength(200)]
+    public string? Description { get; set; }
+
     [InverseProperty("ParentCategory")]
     public virtual ICollection<Category> InverseParentCategory { get; set; } = new List<Category>();
 
