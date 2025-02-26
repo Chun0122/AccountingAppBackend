@@ -69,16 +69,16 @@ jobs:
       - name: Generate Swagger JSON
         shell: cmd
         run: |
-            dotnet tool install -g Swashbuckle.AspNetCore.Cli --version 6.6.2
+            dotnet tool install -g Swashbuckle.AspNetCore.Cli --version 6.6.0
             set dllPath=AccountingAppBackend\bin\Release\net8.0\AccountingAppBackend.dll
             echo Using DLL path: %dllPath%
-            swagger tofile --output swagger.json %dllPath% v1
+            swagger tofile %dllPath% v1 --output swagger.json
             if exist swagger.json (
-              echo Successfully generated Swagger file
-              type swagger.json | findstr /n . | findstr /b "[1-10]:"
+                echo Successfully generated Swagger file
+                type swagger.json | findstr /n . | findstr /b "[1-10]:"
             ) else (
-              echo Failed to generate Swagger file
-              exit /b 1
+                echo Failed to generate Swagger file
+                exit /b 1
             )
       - name: Import API into Azure API Management
         run: az apim api import --path "${{ env.AZURE_APIM_RESOURCE_PATH }}" --resource-group "${{ env.AZURE_APIM_RESOURCEGROUP }}" --service-name "${{ env.AZURE_APIM_SERVICENAME }}" --api-id "${{ env.AZURE_APIM_API_ID }}" --service-url "${{ env.AZURE_APIM_APPSERVICEURL }}" --specification-path "swagger.json" --specification-format OpenApi --subscription-required false
