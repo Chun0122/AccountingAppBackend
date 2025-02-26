@@ -72,9 +72,10 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
       - name: Wait for API to be available
+        shell: powershell
         run: |
-          echo "等待 Web API 啟動並提供 Swagger 端點 (30 秒)..."
-          timeout /t 30 /nobreak
+          Write-Host "等待 Web API 啟動並提供 Swagger 端點 (30 秒)..."
+          Start-Sleep -Seconds 30
       - name: Import API into Azure API Management
         run: az apim api import --path "${{ env.AZURE_APIM_RESOURCE_PATH }}" --resource-group "${{ env.AZURE_APIM_RESOURCEGROUP }}" --service-name "${{ env.AZURE_APIM_SERVICENAME }}" --api-id "${{ env.AZURE_APIM_API_ID }}" --service-url "${{ env.AZURE_APIM_APPSERVICEURL }}" --specification-url "${{ env.AZURE_APIM_APPSERVICEURL }}/swagger/v1/swagger.json" --specification-format OpenApi --subscription-required false
       - name: logout
