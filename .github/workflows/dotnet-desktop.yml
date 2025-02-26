@@ -65,6 +65,7 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
       - name: Build and Generate Swagger JSON
+        shell: cmd
         run: |
             dotnet build AccountingAppBackend.sln -c Release
             if exist AccountingAppBackend\bin\Release\net8.0\swagger.json (
