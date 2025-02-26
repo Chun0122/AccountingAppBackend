@@ -42,45 +42,37 @@ jobs:
     runs-on: windows-latest
     needs: build
     steps:
-      - uses: actions/checkout@v4
-      - name: Setup .NET SDK
-        uses: actions/setup-dotnet@v3
-        with:
-          dotnet-version: |
-            7.0.x
-            8.0.x
-      - name: Download artifact from build job
-        uses: actions/download-artifact@v4
-        with:
-          name: webapp
-          path: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
-      - name: Deploy to Azure WebApp
-        uses: azure/webapps-deploy@v2
-        with:
-          app-name: ${{ env.AZURE_WEBAPP_NAME }}
-          package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
-          publish-profile: ${{ secrets.AccountingAppBackend20250225202146_71C7 }}
-      - name: Azure Login
-        uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
-      - name: Build and Generate Swagger JSON
-        shell: cmd
-        run: |
-            dotnet build AccountingAppBackend.sln -c Release
-            if exist AccountingAppBackend\bin\Release\net8.0\swagger.json (
-              echo Successfully generated Swagger file
-            ) else (
-              echo Failed to generate Swagger file
-              exit /b 1
-            )
-      - name: Upload Swagger JSON
-        uses: actions/upload-artifact@v4
-        with:
-          name: swagger-json
-          path: AccountingAppBackend\bin\Release\net8.0\swagger.json
-      - name: Import API into Azure API Management
-        run: az apim api import --path "${{ env.AZURE_APIM_RESOURCE_PATH }}" --resource-group "${{ env.AZURE_APIM_RESOURCEGROUP }}" --service-name "${{ env.AZURE_APIM_SERVICENAME }}" --api-id "${{ env.AZURE_APIM_API_ID }}" --service-url "${{ env.AZURE_APIM_APPSERVICEURL }}" --specification-path "swagger.json" --specification-format OpenApi --subscription-required false
-      - name: logout
-        run: >
-          az logout
+    - uses: actions/checkout@v4
+    - name: Setup .NET SDK
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: |
+          7.0.x
+          8.0.x
+    - name: Download artifact from build job
+      uses: actions/download-artifact@v4
+      with:
+        name: webapp
+        path: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+    - name: Deploy to Azure WebApp
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: ${{ env.AZURE_WEBAPP_NAME }}
+        package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+        publish-profile: ${{ secrets.AccountingAppBackend20250225202146_71C7 }}
+    - name: Azure Login
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    - name: Install Swashbuckle CLI
+      run: dotnet tool install --global Swashbuckle.AspNetCore.Cli
+    - name: Build and Generate Swagger JSON
+      shell: cmd
+      run: |
+        dotnet build AccountingAppBackend.sln -c Release
+        dotnet swagger tofile --output swagger.json AccountingAppBackend\bin\Release\net8.0\AccountingAppBackend.dll v1
+    - name: Import API into Azure API Management
+      run: az apim api import --path "${{ env.AZURE_APIM_RESOURCE_PATH }}" --resource-group "${{ env.AZURE_APIM_RESOURCEGROUP }}" --service-name "${{ env.AZURE_APIM_SERVICENAME }}" --api-id "${{ env.AZURE_APIM_API_ID }}" --service-url "${{ env.AZURE_APIM_APPSERVICEURL }}" --specification-path "swagger.json" --specification-format OpenApi --subscription-required false
+    - name: logout
+      run: >
+        az logout

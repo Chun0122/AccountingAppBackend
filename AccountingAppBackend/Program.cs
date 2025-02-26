@@ -11,11 +11,6 @@ using Swashbuckle.AspNetCore.Swagger;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// 添加 Swagger 服務
-builder.Services.AddSwaggerGen(c =>
-{
-    c.SwaggerDoc("v1", new() { Title = "AccountingApp API", Version = "v1" });
-});
 
 // Add services to the container.
 builder.Services.AddDbContext<dbContext>(options =>
@@ -95,26 +90,6 @@ builder.Services.AddScoped<IDropdownOptionsService, DropdownOptionsService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 
 var app = builder.Build();
-
-// 配置 Swagger
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI(c =>
-    {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
-    });
-}
-
-// 生成 Swagger JSON 文件
-var swaggerProvider = app.Services.GetRequiredService<ISwaggerProvider>();
-var swaggerDoc = swaggerProvider.GetSwagger("v1");
-using (var writer = new StringWriter())
-{
-    var jsonWriter = new OpenApiJsonWriter(writer);
-    swaggerDoc.SerializeAsV3(jsonWriter);
-    File.WriteAllText("swagger.json", writer.ToString());
-}
 
 app.UseCors("AllowReactApp");
 
