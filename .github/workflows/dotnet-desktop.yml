@@ -70,7 +70,7 @@ jobs:
       shell: cmd
       run: |
         dotnet build AccountingAppBackend.sln -c Release
-        dotnet swagger tofile --output swagger.json AccountingAppBackend\bin\Release\net8.0\AccountingAppBackend.dll v1
+        swagger tofile --output swagger.json AccountingAppBackend\bin\Release\net8.0\AccountingAppBackend.dll v1
     - name: Import API into Azure API Management
       run: az apim api import --path "${{ env.AZURE_APIM_RESOURCE_PATH }}" --resource-group "${{ env.AZURE_APIM_RESOURCEGROUP }}" --service-name "${{ env.AZURE_APIM_SERVICENAME }}" --api-id "${{ env.AZURE_APIM_API_ID }}" --service-url "${{ env.AZURE_APIM_APPSERVICEURL }}" --specification-path "swagger.json" --specification-format OpenApi --subscription-required false
     - name: logout
