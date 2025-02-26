@@ -64,22 +64,20 @@ jobs:
         uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
-      - name: Build for Swagger Generation
-        run: dotnet build ${{ env.WORKING_DIRECTORY }} --configuration ${{ env.CONFIGURATION }}
-      - name: Generate Swagger JSON
-        shell: cmd
+      - name: Build and Generate Swagger JSON
         run: |
-            dotnet tool install -g Swashbuckle.AspNetCore.Cli --version 6.6.0
-            set dllPath=AccountingAppBackend\bin\Release\net8.0\AccountingAppBackend.dll
-            echo Using DLL path: %dllPath%
-            swagger tofile %dllPath% v1 --output swagger.json
-            if exist swagger.json (
-                echo Successfully generated Swagger file
-                type swagger.json | findstr /n . | findstr /b "[1-10]:"
+            dotnet build AccountingAppBackend.sln -c Release
+            if exist AccountingAppBackend\bin\Release\net8.0\swagger.json (
+              echo Successfully generated Swagger file
             ) else (
-                echo Failed to generate Swagger file
-                exit /b 1
+              echo Failed to generate Swagger file
+              exit /b 1
             )
+      - name: Upload Swagger JSON
+        uses: actions/upload-artifact@v3
+        with:
+          name: swagger-json
+          path: AccountingAppBackend\bin\Release\net8.0\swagger.json
       - name: Import API into Azure API Management
         run: az apim api import --path "${{ env.AZURE_APIM_RESOURCE_PATH }}" --resource-group "${{ env.AZURE_APIM_RESOURCEGROUP }}" --service-name "${{ env.AZURE_APIM_SERVICENAME }}" --api-id "${{ env.AZURE_APIM_API_ID }}" --service-url "${{ env.AZURE_APIM_APPSERVICEURL }}" --specification-path "swagger.json" --specification-format OpenApi --subscription-required false
       - name: logout
