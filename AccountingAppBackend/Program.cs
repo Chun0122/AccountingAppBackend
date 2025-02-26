@@ -105,3 +105,9 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+
+public partial class Program
+{
+    // 可以是空的，主要是給 Swashbuckle CLI 用
+}
