@@ -2,7 +2,7 @@
 
 這是一個簡單的記帳網頁應用程式，旨在幫助使用者輕鬆管理他們的個人財務。
 
-後端位置：[https://github.com/Chun0122/AccountingAppBackend]
+前端位置：[https://github.com/Chun0122/accounting-app]
 
 ## 功能特色
 
